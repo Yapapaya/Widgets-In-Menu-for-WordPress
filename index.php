@@ -61,8 +61,8 @@ if (!class_exists('yawpWIM')) {
                         register_sidebar(array(
                             'name' => esc_html__('Widgets in Menu', $this->name),
                             'id' => $this->index,
-                            "before_widget" => '<li id="%1$s" class="' . $this->index . ' %2$s">',
-                            "after_widget" => '</li>',
+                            "before_widget" => '<div id="%1$s" class="' . $this->index . ' %2$s">',
+                            "after_widget" => '</div>',
                             'description' => esc_html__('Widgets in this area will be shown on the menu bar.', 'yawp-wim'),
                             'before_title' => '<span class="' . $this->index . '-title">',
                             'after_title' => '</span>'
@@ -117,8 +117,6 @@ if (!class_exists('yawpWIM')) {
 
                         // set up more parameters
                         $params[0]['before_widget'] = sprintf($params[0]['before_widget'], $id, $classname_);
-//                        $params[0]['before_title'] = '<h3>';
-//                        $params[0]['after_title'] = '</h3>';
 
                         /**
                          * Filter the parameters passed to the widget's display callback.
@@ -209,12 +207,10 @@ if (!class_exists('yawpWIM')) {
                                 ?>
                                 <div class="<?php echo $class_str; ?>">
                                         <div class="widget-area">
-                                                <div class="widget widget_<?php echo rtrim(preg_replace("|[0-9]+|i", "", $id), '-'); ?>" id="<?php echo $id; ?>">
-                                                        <?php
-                                                        // call the widget callback function
-                                                        call_user_func_array($callback, $params);
-                                                        ?>
-                                                </div>
+                                                <?php
+                                                // call the widget callback function
+                                                call_user_func_array($callback, $params);
+                                                ?>
                                         </div>
                                 </div>
                                 <?php
@@ -275,6 +271,7 @@ if (!class_exists('yawpWIM')) {
                                         $widget_slug = rtrim(preg_replace("|[0-9]+|i", "", $id), '-');
                                         $widget_saved = get_option('widget_' . $widget_slug, array());
                                         $widget_name = $widget_saved[$widget_num]['title'];
+                                        $widget_name = ($widget_name)?$widget_name:$widget['name'];
                                         $output .= '<label for="' . $id . '">';
                                         $output .= '<input name="menu-item[' . $_nav_menu_placeholder . '][menu-item-object-id]" type="checkbox" value="' . $widget_num . '" id="' . $id . '" class="menu-item-checkbox ' . $id . '">';
                                         $output .= $widget_name;
