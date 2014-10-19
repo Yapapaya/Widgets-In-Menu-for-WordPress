@@ -63,7 +63,7 @@ if (!class_exists('yawpWIM')) {
                             'id' => $this->index,
                             "before_widget" => '<div id="%1$s" class="' . $this->index . ' %2$s">',
                             "after_widget" => '</div>',
-                            'description' => esc_html__('Widgets in this area will be shown on the menu bar.', 'yawp-wim'),
+                            'description' => esc_html__('Widgets in this area will be shown on the edit menu screen.', 'yawp-wim'),
                             'before_title' => '<span class="' . $this->index . '-title">',
                             'after_title' => '</span>'
                         ));

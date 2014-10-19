@@ -1,15 +1,12 @@
-=== Widgets in Menu for WordPress ===
-Contributors: saurabhshukla
-Tags: Widgets, Menus, Custom Link
-Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 0.0.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# Widgets in Menu for WordPress #
+
+* **Contributors:** [saurabhshukla] (http://profiles.wordpress.org/saurabhshukla),
+
+* **License:** [GPL v2 or later] ( http://www.gnu.org/licenses/gpl-2.0.html)
 
 Allows you to add Widgets in WordPress Navigation Menus
 
-== Description ==
+## Description ##
 
 Allows you to add Widgets in WordPress Navigation Menus via a custom widget area and an extra box in menu edit screen.
 
@@ -17,7 +14,7 @@ Allows you to add Widgets in WordPress Navigation Menus via a custom widget area
 > 
 > You will need to have some CSS skills for the widgets to display properly in nav menus.
 
-= Usage =
+#### Usage ####
 
 1. Add the desired widget to the *Widgets in Menu* widget area in *Appearance > Widgets*.
 1. The widget will now appear under *Widgets* in *Appearance > Menus*
@@ -26,13 +23,13 @@ Allows you to add Widgets in WordPress Navigation Menus via a custom widget area
 1. Add some custom css as per your need.
 1. Done. 
 
-== Installation ==
+## Installation ##
 
 1. Add the plugin's folder in the WordPress' plugin directory.
 1. Activate the plugin.
 1. You can now add shortcodes in the custom links of the menus
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
 *The widgets show up, but the display is all messed up.*
 
@@ -62,7 +59,7 @@ Using these selectors, one can style the widgets.
 1. Add some custom css as per your need.
 1. Done. 
 
-== Changelog ==
+## Changelog ##
 
-= 0.0.1 =
+#### 0.0.1 ####
 * Initial Plugin uploaded.
