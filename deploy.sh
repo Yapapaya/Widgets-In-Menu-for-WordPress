@@ -3,9 +3,9 @@
 # The difference is that this script lives in the plugin's git repo & doesn't require an existing SVN repo.
  
 # main config
-PLUGINSLUG="nginx-helper"  #must match with wordpress.org plugin slug
-MAINFILE="nginx-helper.php" # this should be the name of your main php file in the wordpress plugin
-#SVNUSER="rtcamp" # your svn username
+PLUGINSLUG="widgets-in-menu"  #must match with wordpress.org plugin slug
+MAINFILE="index.php" # this should be the name of your main php file in the wordpress plugin
+#SVNUSER="saurabhshukla" # your svn username
  
  
 ##### YOU CAN STOP EDITING HERE #####
