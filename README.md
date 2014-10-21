@@ -1,4 +1,4 @@
-![alt text](https://plugins.svn.wordpress.org/widgets-in-menu/assets/banner-772x250.png)
+![alt text](/assets/banner-772x250.png)
 # Widgets in Menu for WordPress #
 
 * **Contributors:** [saurabhshukla] (http://profiles.wordpress.org/saurabhshukla),

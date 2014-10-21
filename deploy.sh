@@ -75,6 +75,8 @@ README.md
 .gitignore
 map.conf
 nginx.log" "$SVNPATH/trunk/"
+assets/banner-772x250.png
+assets/banner-772x250.jpg
  
 echo "Changing directory to SVN and committing to trunk"
 cd $SVNPATH/trunk/
