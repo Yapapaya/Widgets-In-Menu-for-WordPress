@@ -1,4 +1,5 @@
-![alt text](/assets/banner-772x250.png)
+![alt text](assets/banner-772x250.png)
+
 # Widgets in Menu for WordPress #
 
 * **Contributors:** [saurabhshukla] (http://profiles.wordpress.org/saurabhshukla),
@@ -17,18 +18,23 @@ Allows you to add Widgets in WordPress Navigation Menus via a custom widget area
 
 #### Usage ####
 
-1. Add the desired widget to the *Widgets in Menu* widget area in *Appearance > Widgets*.
-1. The widget will now appear under *Widgets* in *Appearance > Menus*
-1. Just add the widget to the menu, as usual. 
-1. **Don't** change any settings for the menu item. Manage your widget from the *Appearance > Widgets* screen.
-1. Add some custom css as per your need.
-1. Done. 
+[View the screenshots](https://wordpress.org/plugins/widgets-in-menu/screenshots) for usage instructions. 
+
+#### Source code and Contributions ####
+
+[Fork on Github](https://github.com/yapapaya/Widgets-In-Menu-for-WordPress)
+
+Contributions are always welcome
+
+#### Documentation ####
+
+Most documentation is inline. Will put up hooks documentation later.
+Some useful stuff is in the [FAQ section](https://wordpress.org/plugins/widgets-in-menu/faq/).
 
 ## Installation ##
-
-1. Add the plugin's folder in the WordPress' plugin directory.
-1. Activate the plugin.
-1. You can now add shortcodes in the custom links of the menus
+* Install the plugin from the 'Plugins' section in your dashboard (Go to Plugins > Add New > Search and search for rtMedia).
+* Alternatively, you can download the plugin from the repository. Unzip it and upload it to the plugins folder of your WordPress installation (wp-content/plugins/ directory of your WordPress installation).
+* Activate it through the 'Plugins' section.
 
 ## Frequently Asked Questions ##
 
@@ -38,7 +44,7 @@ That's because the css for the nav menu was never meant to take care of widgets.
 
 For example, if the widget contains a link, you might have to redo it. If it's a calendar:
 
-`.yawp-wim_wrap a {
+`.yawp_wim_wrap a {
 width: auto !important;
 padding: 0 !important;
 }`
@@ -47,20 +53,96 @@ padding: 0 !important;
 
 Inspect element is your friend. Otherwise, the menu item will have the classes *menu-item-type-yawp_wim*, *menu-item-object-yawp_wim*.
 
-Additionally, the widget will be wrapped in a div with the class *yawp-wim_wrap*.
+Additionally, the widget will be wrapped in a div with the class *yawp_wim_wrap*.
 
 Using these selectors, one can style the widgets.
 
 *How does one use the plugin?*
 
-1. Add the desired widget to the *Widgets in Menu* widget area in *Appearance > Widgets*.
-1. The widget will now appear under *Widgets* in *Appearance > Menus*
-1. Just add the widget to the menu, as usual. 
-1. **Don't** change any settings for the menu item. Manage your widget from the *Appearance > Widgets* screen.
-1. Add some custom css as per your need.
-1. Done. 
+[View the screenshots](https://wordpress.org/plugins/widgets-in-menu/screenshots) for usage instructions. 
+
+## Screenshots ##
+
+1. Add any widget to the 'Widgets in Menu' widget area.
+2. Your widgets appear in an new metabox on the Edit Menus screen.
+3. Add your widget to any menu, just like you add pages or posts.
+4. Your widget starts appearing in the navigation menu.
+5. Add css as per taste to finalise the look.
 
 ## Changelog ##
 
 #### 0.0.1 ####
 * Initial Plugin uploaded.
+
+#### 0.1.0 ####
+* Added translation support.
+* Added label for single menu item.
+* Added Widget type + Set title just like widget areas.
+* Improved js.
+* Added minified js.
+* Better filter for html element attribute.
+* Better inline documentation.
+* Improved readme and help.
+* Added screenshots.
+
+#### 0.1.0 ####
+Major improvement over the initial release. See changelog for details.
+
+## Hooks ##
+
+#### Actions ####
+
+**yawp_wim_pre_callback**
+
+Fires before a widget's display callback is called. Similar to 'dynamic_sidebar' action.
+
+*Parameters*
+
+ * *$yawp_wim_widget*    array    An associative array of widget arguments.
+     1. string *$name* Name of the widget.
+     1. string *$id* Widget ID.
+     1. array|callback *$callback* When the hook is fired on the front-end, $callback is an array containing the widget object. Fired on the back-end, $callback is 'wp_widget_control', see $_callback.
+     1. array *$params* An associative array of multi-widget arguments.
+     1. string *$classname* CSS class applied to the widget container.
+     1. string *$description* The widget description.
+     1. array *$_callback* When the hook is fired on the back-end, $_callback is populated with an array containing the widget object, see $callback.
+
+#### Filters ####
+
+**yawp_wim_attribute_prefix**
+
+Filters the prefix used in class/id attributes in html display.
+
+*Parameters*
+
+ * *$default_prefix*    string   The default prefix: 'yawp_wim'
+
+**yawp_wim_widget_params**
+
+Filter the parameters passed to the widget's display callback. Similar to 'dynamic_sidebar_params' filter
+
+*Parameters*
+
+ * *$params*	array
+	 1. array	*$args*	An array of widget display arguments.
+		 1. string *$name* Name of the sidebar the widget is assigned to.
+		 1. string *$id* ID of the sidebar the widget is assigned to.
+		 1. string *$description* The sidebar description.
+		 1. string *$class* CSS class applied to the sidebar container.
+		 1. string *$before_widget* HTML markup to prepend to each widget in the sidebar.
+		 1. string *$after_widget* HTML markup to append to each widget in the sidebar.
+		 1. string *$before_title* HTML markup to prepend to the widget title when displayed.
+		 1. string *$after_title* HTML markup to append to the widget title when displayed.
+		 1. string *$widget_id* ID of the widget.
+		 1. string *$widget_name* Name of the widget. }
+	 1. array	*$widget_args*	An array of multi-widget arguments.
+		 1. int *$number* Number increment used for multiples of the same widget.
+
+**yawp_wim_no_widgets_message**
+
+Filters the html displayed if no widgets are present in the sidebar.
+
+*Parameters*
+
+ * **$no_widgets_output**	array	The default output
+

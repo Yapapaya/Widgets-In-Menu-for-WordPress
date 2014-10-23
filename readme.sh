@@ -20,19 +20,19 @@ fi
 curl -I $1/assets/banner-772x250.png 2> /dev/null | grep '200 OK' &> /dev/null
 if [ $? -eq 0 ]
 then
-    echo "![alt text]($1assets/banner-772x250.png)" &> /tmp/file
+    echo "![alt text](assets/banner-772x250.png)" &> /tmp/file
     echo >> /tmp/file
 fi
 curl -I $1assets/banner-772x250.jpg 2> /dev/null | grep '200 OK' &> /dev/null
 if [ $? -eq 0 ]
 then
-    echo "![alt text]($1assets/banner-772x250.jpg)" &> /tmp/file
+    echo "![alt text](assets/banner-772x250.jpg)" &> /tmp/file
     echo >> /tmp/file
 fi
 curl -I $1assets/banner-772x250.jpeg 2> /dev/null | grep '200 OK' &> /dev/null
 if [ $? -eq 0 ]
 then
-    echo "![alt text]($1assets/banner-772x250.jpeg)" &> /tmp/file
+    echo "![alt text](assets/banner-772x250.jpeg)" &> /tmp/file
     echo >> /tmp/file
 fi
  
