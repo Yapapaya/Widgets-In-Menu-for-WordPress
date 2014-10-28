@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Saurabh Shukla
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: yawp-wim 0.1.1\n"
+"Report-Msgid-Bugs-To: info@yapapaya.com\n"
+"POT-Creation-Date: 2014-10-28 15:16+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: index.php:95
+msgid "Widgets in Menu"
+msgstr ""
+
+#: index.php:99
+msgid "Widgets in this area will be shown on the edit menu screen."
+msgstr ""
+
+#: index.php:261 index.php:399
+msgid "Widgets"
+msgstr ""
+
+#: index.php:293
+#, php-format
+msgid ""
+"<a href=\"%s\">Please add a widget</a> to the <em>Widgets in Menu</em> area"
+msgstr ""
+
+#: index.php:394
+msgid "Settings"
+msgstr ""
+
+#: index.php:397
+msgid "Appearance"
+msgstr ""
+
+#: index.php:453
+msgid "Widget"
+msgstr ""

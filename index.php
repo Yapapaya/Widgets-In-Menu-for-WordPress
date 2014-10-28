@@ -3,7 +3,7 @@
   Plugin Name: Widgets in Menu for WordPress
   Plugin URI: http://wordpress.org/plugins/widgets-in-menu/
   Description: Add widgets to any WordPress menu!
-  Version: 0.1.0
+  Version: 0.1.1
   Author: saurabhshukla
   Author URI: http://github.com/yapapaya/
   Text Domain: yawp_wim
@@ -19,7 +19,7 @@ if (!class_exists('yawpWIM')) {
 		 *
 		 * @var	string The current version
 		 */
-		public $version = "0.1.0";
+		public $version = "0.1.1";
 
 		/**
 		 *
@@ -71,8 +71,8 @@ if (!class_exists('yawpWIM')) {
 			// hook into the edit menus admin screen
 			add_action('admin_init', array($this, 'menu_setup'));
 
-			// add our custom js on edit menu screen, load very late
-			add_action('admin_enqueue_scripts', array($this, 'enqueue'), 99, 1);
+			// add our custom js on edit menu screen
+			add_action('admin_enqueue_scripts', array($this, 'enqueue'));
 
 			// filter the menu item display on edit screen
 			add_filter('wp_setup_nav_menu_item', array($this, 'label'), 10, 1);
@@ -258,7 +258,7 @@ if (!class_exists('yawpWIM')) {
 		 */
 		public function menu_setup() {
 			add_meta_box(
-					'add-widget-section', __('Widgets'), array($this, 'meta_box'), 'nav-menus', 'side', 'default'
+					'add-widget-section', __('Widgets', $this->domain), array($this, 'meta_box'), 'nav-menus', 'side', 'default'
 			);
 		}
 
@@ -391,12 +391,12 @@ if (!class_exists('yawpWIM')) {
 				
 				$output .= '<p style="display:none;" class="msg-yawp_sim">';
 				// no text-domain, so that the Strings translated by WordPress are used
-				$output .= __('Settings')
+				$output .= __('Settings', $this->domain)
 						. ': '
 						.sprintf('<a href="%s">',admin_url("widgets.php"))
-						. __('Appearance')
+						. __('Appearance', $this->domain)
 						.' > '
-						. __('Widgets').'</a>';
+						. __('Widgets', $this->domain).'</a>';
 				$output .= '<p>';
 				$output .= '</ul>';
 			}
@@ -450,7 +450,7 @@ if (!class_exists('yawpWIM')) {
 			if ($item->object === $this->prefix) {
 
 				// setup our label
-				$item->type_label = __('Widget');
+				$item->type_label = __('Widget', $this->domain);
 			}
 			return $item;
 		}

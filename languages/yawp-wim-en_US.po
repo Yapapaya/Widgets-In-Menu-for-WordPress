@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Saurabh Shukla
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: yawp-wim 0.1.1\n"
+"Report-Msgid-Bugs-To: info@yapapaya.com\n"
+"POT-Creation-Date: 2014-10-28 15:16+0530\n"
+"PO-Revision-Date: 2014-10-28 15:18+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_US\n"
+
+#: index.php:95
+msgid "Widgets in Menu"
+msgstr "Widgets in Menu"
+
+#: index.php:99
+msgid "Widgets in this area will be shown on the edit menu screen."
+msgstr "Widgets in this area will be shown on the edit menu screen."
+
+#: index.php:261 index.php:399
+msgid "Widgets"
+msgstr "Widgets"
+
+#: index.php:293
+#, php-format
+msgid ""
+"<a href=\"%s\">Please add a widget</a> to the <em>Widgets in Menu</em> area"
+msgstr ""
+"<a href=\"%s\">Please add a widget</a> to the <em>Widgets in Menu</em> area"
+
+#: index.php:394
+msgid "Settings"
+msgstr "Settings"
+
+#: index.php:397
+msgid "Appearance"
+msgstr "Appearance"
+
+#: index.php:453
+msgid "Widget"
+msgstr "Widget"

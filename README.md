@@ -28,11 +28,12 @@ Contributions are always welcome
 
 #### Documentation ####
 
-Most documentation is inline. Will put up hooks documentation later.
-Some useful stuff is in the [FAQ section](https://wordpress.org/plugins/widgets-in-menu/faq/).
+* Most documentation is inline.
+* The hooks (actions and filters) are documented in the [Other Notes](https://wordpress.org/plugins/widgets-in-menu/other_notes/).
+* Some useful stuff is in the [FAQ section](https://wordpress.org/plugins/widgets-in-menu/faq/).
 
 ## Installation ##
-* Install the plugin from the 'Plugins' section in your dashboard (Go to Plugins > Add New > Search and search for rtMedia).
+* Install the plugin from the 'Plugins' section in your dashboard (Go to Plugins > Add New > Search and search for *Widgets in Menu for WordPress*).
 * Alternatively, you can download the plugin from the repository. Unzip it and upload it to the plugins folder of your WordPress installation (wp-content/plugins/ directory of your WordPress installation).
 * Activate it through the 'Plugins' section.
 
@@ -57,6 +58,16 @@ Additionally, the widget will be wrapped in a div with the class *yawp_wim_wrap*
 
 Using these selectors, one can style the widgets.
 
+Also, using various filters (see: Other Notes), especially *yawp_wim_attribute_prefix*, you can change this *yawp_wim* prefix to something of your own:
+
+`add_filter('yawp_wim_attribute_prefix','my_prefix');
+
+function my_prefix($default_prefix){
+    return 'my_prefix';
+}`
+
+The wrapper class will now be *my_prefix_wrap* and so on.
+ 
 *How does one use the plugin?*
 
 [View the screenshots](https://wordpress.org/plugins/widgets-in-menu/screenshots) for usage instructions. 
