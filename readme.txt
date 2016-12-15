@@ -3,7 +3,7 @@ Contributors: saurabhshukla
 Tags: Widgets, Menus, Custom Link
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 0.1.1
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,8 +83,9 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 
 == Changelog ==
 
-= 0.0.1 =
-* Initial Plugin uploaded.
+= 0.2.0 =
+
+* Refactored code completely in line with WP standards.
 
 = 0.1.0 =
 * Added translation support.
@@ -96,6 +97,9 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 * Better inline documentation.
 * Improved readme and help.
 * Added screenshots.
+
+= 0.0.1 =
+* Initial Plugin uploaded.
 
 == Upgrade Notice ==
 
