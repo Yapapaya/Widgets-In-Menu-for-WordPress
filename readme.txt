@@ -84,8 +84,8 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 == Changelog ==
 
 = 0.2.0 =
-
 * Refactored code completely in line with WP standards.
+* Fixed notices by overriding WP's default add menu item function.
 
 = 0.1.0 =
 * Added translation support.
