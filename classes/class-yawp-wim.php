@@ -94,7 +94,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 				$min = '.min';
 			}
 			wp_enqueue_script(
-				YAWP_WIM_PREFIX, YAWP_WIM_URL . "/yawp-wim{$min}.js", array( 'nav-menu' ), $this->version
+				YAWP_WIM_PREFIX, YAWP_WIM_URL . "/js/yawp-wim{$min}.js", array( 'nav-menu' ), $this->version
 			);
 		}
 
