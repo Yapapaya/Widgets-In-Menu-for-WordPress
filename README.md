@@ -2,7 +2,7 @@
 
 # Widgets in Menu for WordPress #
 
-* **Contributors:** [saurabhshukla] (http://profiles.wordpress.org/saurabhshukla),
+* **Contributors:** [saurabhshukla] (https://profiles.wordpress.org/saurabhshukla),[yapapaya] (https://profiles.wordpress.org/yapapaya)
 
 * **License:** [GPL v2 or later] ( http://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -82,8 +82,9 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 
 ## Changelog ##
 
-#### 0.0.1 ####
-* Initial Plugin uploaded.
+#### 0.2.0 ####
+* Refactored code completely in line with WP standards.
+* Fixed notices by overriding WP's default add menu item function.
 
 #### 0.1.0 ####
 * Added translation support.
@@ -96,8 +97,9 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 * Improved readme and help.
 * Added screenshots.
 
-#### 0.1.0 ####
-Major improvement over the initial release. See changelog for details.
+#### 0.0.1 ####
+* Initial Plugin uploaded.
+
 
 ## Hooks ##
 
@@ -156,4 +158,3 @@ Filters the html displayed if no widgets are present in the sidebar.
 *Parameters*
 
  * **$no_widgets_output**	array	The default output
-

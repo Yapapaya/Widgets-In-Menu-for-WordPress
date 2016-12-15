@@ -103,8 +103,8 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 
 == Upgrade Notice ==
 
-= 0.1.0 =
-Major improvement over the initial release. See changelog for details.
+= 0.2.0 =
+Refactored code and fixed errors. See changelog for details.
 
 == Hooks ==
 
@@ -163,4 +163,3 @@ Filters the html displayed if no widgets are present in the sidebar.
 *Parameters*
 
  * **$no_widgets_output**	array	The default output
-
