@@ -82,6 +82,10 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 
 ## Changelog ##
 
+#### 0.2.1 ####
+* Fixed notice.
+* Moved attribute prefix to main file.
+
 #### 0.2.0 ####
 * Refactored code completely in line with WP standards.
 * Fixed notices by overriding WP's default add menu item function.

@@ -3,7 +3,7 @@ Contributors: saurabhshukla, yapapaya
 Tags: Widgets, Menus, Custom Link
 Requires at least: 3.5
 Tested up to: 4.7
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,10 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 
 == Changelog ==
 
+= 0.2.1 =
+* Fixed notice.
+* Moved attribute prefix to main file.
+
 = 0.2.0 =
 * Refactored code completely in line with WP standards.
 * Fixed notices by overriding WP's default add menu item function.
@@ -103,8 +107,8 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 
 == Upgrade Notice ==
 
-= 0.2.0 =
-Refactored code and fixed errors. See changelog for details.
+= 0.2.1 =
+Fixed a notice. See changelog for details.
 
 == Hooks ==
 
