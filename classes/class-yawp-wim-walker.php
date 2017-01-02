@@ -128,7 +128,7 @@ if ( ! class_exists( 'YAWP_WIM_Walker' ) ) {
 			do_action( 'yawp_wim_pre_callback', $yawp_wim_widget );
 
 			// set up the wrapper class
-			$wrapper_class = $this->attr_prefix . '_wrap';
+			$wrapper_class = YAWP_WIM_PREFIX . '_wrap';
 
 			// get the registered callback function for this widget
 			$callback = $wp_registered_widgets[ $id ][ 'callback' ];

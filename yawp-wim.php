@@ -19,10 +19,19 @@
 define( 'YAWP_WIM_VERSION', '0.2.0' );
 
 /**
+ * Filters the prefix used in class/id attributes in html display. 
+ * 
+ * @since 0.1.0
+ * 
+ * @param string $default_prefix The default prefix: 'yawp_wim'
+ */
+$attr_prefix = apply_filters( 'yawp_wim_attribute_prefix', 'yawp_wim' );
+
+/**
  *
  * A string prefix for internal names and ids 
  */
-define( 'YAWP_WIM_PREFIX', 'yawp_wim' );
+define( 'YAWP_WIM_PREFIX', $attr_prefix );
 
 /**
  * Plugin's file path

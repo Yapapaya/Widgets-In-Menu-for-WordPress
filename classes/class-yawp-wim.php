@@ -16,22 +16,6 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 		public $domain = 'yawp-wim';
 
 		/**
-		 * Sets up variables
-		 */
-		public function __construct() {
-
-			$default_prefix = YAWP_WIM_PREFIX;
-			/**
-			 * Filters the prefix used in class/id attributes in html display. 
-			 * 
-			 * @since 0.1.0
-			 * 
-			 * @param string $default_prefix The default prefix: 'yawp_wim'
-			 */
-			$this->attr_prefix = apply_filters( 'yawp_wim_attribute_prefix', $default_prefix );
-		}
-
-		/**
 		 * Hooks to the necessary actions and filters
 		 */
 		public function init() {
@@ -70,10 +54,10 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 			register_sidebar( array(
 				'name' => __( 'Widgets in Menu', $this->domain ),
 				'id' => YAWP_WIM_PREFIX,
-				"before_widget" => '<div id="%1$s" class="' . $this->attr_prefix . '_widget %2$s">',
+				"before_widget" => '<div id="%1$s" class="' . YAWP_WIM_PREFIX . '_widget %2$s">',
 				"after_widget" => '</div>',
 				'description' => __( 'Widgets in this area will be shown on the edit menu screen.', $this->domain ),
-				'before_title' => '<span class="' . $this->attr_prefix . '_title">',
+				'before_title' => '<span class="' . YAWP_WIM_PREFIX . '_title">',
 				'after_title' => '</span>'
 			) );
 		}
