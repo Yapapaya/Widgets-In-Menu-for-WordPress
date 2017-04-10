@@ -3,7 +3,7 @@ Contributors: saurabhshukla, yapapaya
 Tags: Widgets, Menus, Custom Link
 Requires at least: 3.5
 Tested up to: 4.7
-Stable tag: 0.2.1
+Stable tag: 0.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,10 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 5. Add css as per taste to finalise the look.
 
 == Changelog ==
+
+= 0.2.2 =
+* Fixed i18n issues.
+* 
 
 = 0.2.1 =
 * Fixed notice.

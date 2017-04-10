@@ -4,10 +4,10 @@
   Plugin Name: Widgets in Menu for WordPress
   Plugin URI: http://wordpress.org/plugins/widgets-in-menu/
   Description: Add widgets to any WordPress menu!
-  Version: 0.2.1
+  Version: 0.2.2
   Author: saurabhshukla, yapapaya
   Author URI: http://github.com/yapapaya/
-  Text Domain: yawp_wim
+  Text Domain: yawp-wim
   Domain Path: /languages
   License: GNU General Public License v2 or later
  */
