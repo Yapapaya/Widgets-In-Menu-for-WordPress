@@ -189,7 +189,6 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 				}
 
 				$output .= '<p style="display:none;" class="msg-yawp_sim">';
-				// no text-domain, so that the Strings translated by WordPress are used
 				$output .= __( 'Settings', 'yawp-wim' )
 					. ': '
 					. sprintf( '<a href="%s">', admin_url( "widgets.php" ) )
