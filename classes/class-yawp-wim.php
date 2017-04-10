@@ -10,12 +10,6 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 		public $attr_prefix;
 
 		/**
-		 *
-		 * @var string The text-domain
-		 */
-		public $domain = 'yawp-wim';
-
-		/**
 		 * Hooks to the necessary actions and filters
 		 */
 		public function init() {
@@ -43,7 +37,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 		 */
 		public function localise() {
 			load_plugin_textdomain(
-				$this->domain, false, plugin_dir_path( __FILE__ ) . '/languages'
+				'yawp-wim', false, plugin_dir_path( __FILE__ ) . '/languages'
 			);
 		}
 
@@ -52,11 +46,11 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 		 */
 		public function sidebar() {
 			register_sidebar( array(
-				'name' => __( 'Widgets in Menu', $this->domain ),
+				'name' => __( 'Widgets in Menu', 'yawp-wim' ),
 				'id' => YAWP_WIM_PREFIX,
 				"before_widget" => '<div id="%1$s" class="' . YAWP_WIM_PREFIX . '_widget %2$s">',
 				"after_widget" => '</div>',
-				'description' => __( 'Widgets in this area will be shown on the edit menu screen.', $this->domain ),
+				'description' => __( 'Widgets in this area will be shown on the edit menu screen.', 'yawp-wim' ),
 				'before_title' => '<span class="' . YAWP_WIM_PREFIX . '_title">',
 				'after_title' => '</span>'
 			) );
@@ -67,7 +61,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 		 */
 		public function menu_setup() {
 			add_meta_box(
-				'add-widget-section', __( 'Widgets', $this->domain ), array( $this, 'meta_box' ), 'nav-menus', 'side', 'default'
+				'add-widget-section', __( 'Widgets', 'yawp-wim' ), array( $this, 'meta_box' ), 'nav-menus', 'side', 'default'
 			);
 		}
 
@@ -98,7 +92,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 				// the default output
 				$no_widgets_output = '<p>';
 				$no_widgets_output .= sprintf( __( '<a href="%s">Please add a '
-						. 'widget</a> to the <em>Widgets in Menu</em> area', $this->domain ), admin_url( "widgets.php" ) );
+						. 'widget</a> to the <em>Widgets in Menu</em> area', 'yawp-wim' ), admin_url( "widgets.php" ) );
 				$no_widgets_output .= '</p>';
 
 				/**
@@ -196,12 +190,12 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 
 				$output .= '<p style="display:none;" class="msg-yawp_sim">';
 				// no text-domain, so that the Strings translated by WordPress are used
-				$output .= __( 'Settings', $this->domain )
+				$output .= __( 'Settings', 'yawp-wim' )
 					. ': '
 					. sprintf( '<a href="%s">', admin_url( "widgets.php" ) )
-					. __( 'Appearance', $this->domain )
+					. __( 'Appearance', 'yawp-wim' )
 					. ' > '
-					. __( 'Widgets', $this->domain ) . '</a>';
+					. __( 'Widgets', 'yawp-wim' ) . '</a>';
 				$output .= '<p>';
 				$output .= '</ul>';
 			}
@@ -353,7 +347,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 			if ( $item->object === YAWP_WIM_PREFIX ) {
 
 				// setup our label
-				$item->type_label = __( 'Widget', $this->domain );
+				$item->type_label = __( 'Widget', 'yawp-wim' );
 			}
 			return $item;
 		}
