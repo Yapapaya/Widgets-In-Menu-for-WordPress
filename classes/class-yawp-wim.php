@@ -113,6 +113,8 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 				// add to the final output
 				$output .= $no_widgets_output;
 			} else {
+				$output .= '<p><i>Hover over items for complete URL</i></p>';
+
 				// we have widgets, so we'll output them in an unordered list,
 				// like wordpress does
 				$output .= '<ul>';
@@ -146,9 +148,12 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 					$widget_name = $widget[ 'name' ];
 					$widget_name .= (empty( $widget_title )) ? '' : ': ' . $widget_title;
 
+					// generate tooltip text
+					$tooltip_text = (isset($widget_saved[ $widget_num ]['permalink']) ? $widget_saved[ $widget_num ]['permalink'] : '');
+
 					// start the list item
 					$output .= '<li>';
-					$output .= '<label for="' . $id . '">';
+					$output .= '<label title="' .$tooltip_text. '" for="' . $id . '">';
 
 					// checkbox
 					$output .= '<input name="menu-item['
