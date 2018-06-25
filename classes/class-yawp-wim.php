@@ -140,7 +140,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 					$widget_saved = get_option( 'widget_' . $widget_slug, array() );
 
 					// get the title from the saved settings
-					$widget_title = $widget_saved[ $widget_num ][ 'title' ];
+					$widget_title = (isset($widget_saved[ $widget_num ][ 'title' ])) ? $widget_saved[ $widget_num ][ 'title' ] : '';
 
 					// get the name
 					$widget_name = $widget[ 'name' ];
