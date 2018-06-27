@@ -5,6 +5,9 @@
   Plugin URI: http://wordpress.org/plugins/widgets-in-menu/
   Description: Add widgets to any WordPress menu!
   Version: 0.2.2
+  Requires at least: 3.5
+  Requires PHP: 5.2
+  Tested upto: 4.9.6
   Author: saurabhshukla, yapapaya
   Author URI: http://github.com/yapapaya/
   Text Domain: yawp-wim
@@ -13,23 +16,23 @@
  */
 
 /**
- * 
+ *
  * The current version
  */
 define( 'YAWP_WIM_VERSION', '0.2.1' );
 
 /**
- * Filters the prefix used in class/id attributes in html display. 
- * 
+ * Filters the prefix used in class/id attributes in html display.
+ *
  * @since 0.1.0
- * 
+ *
  * @param string $default_prefix The default prefix: 'yawp_wim'
  */
 $attr_prefix = apply_filters( 'yawp_wim_attribute_prefix', 'yawp_wim' );
 
 /**
  *
- * A string prefix for internal names and ids 
+ * A string prefix for internal names and ids
  */
 define( 'YAWP_WIM_PREFIX', $attr_prefix );
 

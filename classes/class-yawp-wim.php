@@ -68,7 +68,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 		/**
 		 * Add a custom metabox on edit menu screen for widgets
 		 * 
-		 * @globa		int			$_nav_menu_placeholder	A placeholder index for the menu item
+		 * @global		int			$_nav_menu_placeholder	A placeholder index for the menu item
 		 * @global		int|string	$nav_menu_selected_id	(id, name or slug) of the currently-selected menu
 		 * @global      array		$wp_registered_widgets	All registered widgets
 		 * @global      array		$wp_registered_sidebars All registered sidebars
