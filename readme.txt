@@ -1,5 +1,5 @@
 === Widgets in Menu for WordPress ===
-Contributors: saurabhshukla, yapapaya
+Contributors: saurabhshukla
 Tags: Widgets, Menus, Custom Link
 Requires at least: 3.5
 Tested up to: 4.7
@@ -14,12 +14,12 @@ Allows you to add Widgets in WordPress Navigation Menus
 Allows you to add Widgets in WordPress Navigation Menus via a custom widget area and an extra box in menu edit screen.
 
 > **Warning**
-> 
+>
 > You will need to have some CSS skills for the widgets to display properly in nav menus.
 
 = Usage =
 
-[View the screenshots](https://wordpress.org/plugins/widgets-in-menu/screenshots) for usage instructions. 
+[View the screenshots](https://wordpress.org/plugins/widgets-in-menu/screenshots) for usage instructions.
 
 = Source code and Contributions =
 
@@ -68,10 +68,10 @@ function my_prefix($default_prefix){
 }`
 
 The wrapper class will now be *my_prefix_wrap* and so on.
- 
+
 *How does one use the plugin?*
 
-[View the screenshots](https://wordpress.org/plugins/widgets-in-menu/screenshots) for usage instructions. 
+[View the screenshots](https://wordpress.org/plugins/widgets-in-menu/screenshots) for usage instructions.
 
 == Screenshots ==
 
@@ -85,7 +85,7 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 
 = 0.2.2 =
 * Fixed i18n issues.
-* 
+*
 
 = 0.2.1 =
 * Fixed notice.
