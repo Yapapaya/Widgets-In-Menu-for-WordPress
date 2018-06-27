@@ -5,9 +5,15 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'YAWP_WIM_Walker' ) ) {
 
+	/**
+	 * Class to extend Menu Walker
+	 */
 	class YAWP_WIM_Walker {
 
-		public function init() {
+		/**
+		 * Hook into walker
+		 */
+		public function hook() {
 			// filter the nav menu item output for rendering widgets
 			add_filter( 'walker_nav_menu_start_el', array( $this, 'start_el' ), 1, 4 );
 		}

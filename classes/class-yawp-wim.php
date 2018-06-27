@@ -1,11 +1,15 @@
 <?php
-
+/**
+ * Contains the main plugin class
+ */
 // prevent direct access
 defined( 'ABSPATH' ) || exit;
 
-
 if ( ! class_exists( 'YAWP_WIM' ) ) {
 
+	/**
+	 * Main Plugin Class
+	 */
 	class YAWP_WIM {
 
 		/**
@@ -17,7 +21,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 		/**
 		 * Hooks to the necessary actions and filters
 		 */
-		public function init() {
+		public function hook() {
 			// initialise translations
 			add_action( 'plugins_loaded', array( $this, 'localise' ) );
 
