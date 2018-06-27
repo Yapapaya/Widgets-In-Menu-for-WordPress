@@ -1,11 +1,16 @@
 <?php
+
+// prevent direct access
+defined( 'ABSPATH' ) || exit;
+
+
 if ( ! class_exists( 'YAWP_WIM' ) ) {
 
 	class YAWP_WIM {
 
 		/**
 		 *
-		 * @var string A string prefix for html element attributes 
+		 * @var string A string prefix for html element attributes
 		 */
 		public $attr_prefix;
 
@@ -27,7 +32,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 
 			// filter the menu item display on edit screen
 			add_filter( 'wp_setup_nav_menu_item', array( $this, 'label' ), 10, 1 );
-			
+
 			// replace the default menu add ajax
 			add_action( 'admin_init', array($this, 'filter_ajax'));
 		}
@@ -67,7 +72,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 
 		/**
 		 * Add a custom metabox on edit menu screen for widgets
-		 * 
+		 *
 		 * @global		int			$_nav_menu_placeholder	A placeholder index for the menu item
 		 * @global		int|string	$nav_menu_selected_id	(id, name or slug) of the currently-selected menu
 		 * @global      array		$wp_registered_widgets	All registered widgets
@@ -96,10 +101,10 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 				$no_widgets_output .= '</p>';
 
 				/**
-				 * Filters the html displayed if no widgets are present in the sidebar. 
-				 * 
+				 * Filters the html displayed if no widgets are present in the sidebar.
+				 *
 				 * @since 0.1.0
-				 * 
+				 *
 				 * @param string $no_widgets_output The default output
 				 */
 				$no_widgets_output = apply_filters( 'yawp_wim_no_widgets_message', $no_widgets_output );
@@ -213,14 +218,14 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 			</div><!-- /.customlinkdiv -->
 			<?php
 		}
-		
+
 		/**
 		 * Removes default menu add function & replaces with custom
-		 * 
+		 *
 		 * @since 0.2.0
 		 */
 		public function filter_ajax(){
-		
+
 			// add our own function
 			add_action('wp_ajax_add-menu-item', array($this, '_add_menu_item'), 0);
 
@@ -232,11 +237,11 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 		 * @since 0.2.0
 		 */
 		public function _add_menu_item() {
-			
+
 			// remove default WP function
 			// first extra line in the wp_ajax_add_menu_item clone that this method actually is :(
 			remove_action('wp_ajax_add-menu-item', 'wp_ajax_add_menu_item');
-			
+
 			check_ajax_referer( 'add-menu_item', 'menu-settings-column-nonce' );
 
 			if ( ! current_user_can( 'edit_theme_options' ) )
@@ -248,7 +253,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 			// The following is a hacky way to restore them when adding non-custom items.
 
 			$menu_items_data = array();
-			
+
 			foreach ( ( array ) $_POST[ 'menu-item' ] as $menu_item_data ) {
 				if (
 					! empty( $menu_item_data[ 'menu-item-type' ] ) &&
@@ -316,7 +321,7 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 
 		/**
 		 * Enqueue our js for hooking into wpNavMenu class
-		 * 
+		 *
 		 * @param string $hook A string to identify the current screen
 		 * @return null
 		 */
@@ -337,12 +342,12 @@ if ( ! class_exists( 'YAWP_WIM' ) ) {
 
 		/**
 		 * Changes the label from 'Custom' to 'Widget' on the individual menu item
-		 * 
+		 *
 		 * @param object $item The menu item
 		 * @return object
 		 */
 		function label( $item ) {
-			
+
 			if ( $item->object === YAWP_WIM_PREFIX ) {
 
 				// setup our label
