@@ -82,6 +82,11 @@ The wrapper class will now be *my_prefix_wrap* and so on.
 
 ## Changelog ##
 
+= 1.0.0 =
+* Fixed i18n issues.
+* Added Composer support
+* Fix issues with empty widget titles thanks to Niklas Rosenqvist
+
 #### 0.2.1 ####
 * Fixed notice.
 * Moved attribute prefix to main file.
