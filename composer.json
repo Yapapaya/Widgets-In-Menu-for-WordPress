@@ -1,0 +1,9 @@
+{
+    "name": "yapayapa/widgets-in-menu-for-wordpress",
+    "description": "Allows you to add Widgets in WordPress Navigation Menus via a custom widget area and an extra box in menu edit screen.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+	"prefer-stable": true,
+    "require": {}
+}
